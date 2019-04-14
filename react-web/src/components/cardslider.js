@@ -10,8 +10,10 @@ class SimpleSlider extends React.Component {
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      variableWidth: true,
+      adaptiveHeight:true,
     };
      
     return (
