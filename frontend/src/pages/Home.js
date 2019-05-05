@@ -1,13 +1,15 @@
 import React from 'react';
+import Crousel from 'components/itemCrousel.js'
+import Slider from 'components/mainSlider.js'
 import { Container, Row, Col } from 'reactstrap';
 
 
 const Home = () => {
     return (
         <div>
-            <h2>
-                홈
-            </h2>
+        <Crousel></Crousel>
+         <Container>
+         </Container>
         </div>
     );
 };
