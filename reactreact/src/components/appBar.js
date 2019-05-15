@@ -10,12 +10,12 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import Drawer from 'components/SwipeableTemporaryDrawer.js'
 
 const styles = theme => ({
   root: {
@@ -166,11 +166,9 @@ class PrimarySearchAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuIcon />
-            </IconButton>
+              <Drawer />
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-                0-0
+            (ﾉ◕ヮ◕)ﾉ*
             </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>

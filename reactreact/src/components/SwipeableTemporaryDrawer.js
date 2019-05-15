@@ -9,6 +9,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles({
   list: {
@@ -17,6 +18,9 @@ const useStyles = makeStyles({
   fullList: {
     width: 'auto',
   },
+  menuButton: {
+    color: '#fff'
+  }
 });
 
 function SwipeableTemporaryDrawer() {
@@ -54,7 +58,7 @@ function SwipeableTemporaryDrawer() {
     </div>
   );
 
-  const fullList = (
+  /*const fullList = (
     <div className={classes.fullList}>
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
@@ -74,11 +78,13 @@ function SwipeableTemporaryDrawer() {
         ))}
       </List>
     </div>
-  );
+  );*/
 
   return (
     <div>
-      <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
+      <Button className={classes.menuButton} color="#fff" aria-label="Open drawer" onClick={toggleDrawer('left', true)}>
+      <MenuIcon />
+      </Button>
       <SwipeableDrawer
         open={state.left}
         onClose={toggleDrawer('left', false)}
