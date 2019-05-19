@@ -1,13 +1,13 @@
 import React from 'react';
-import AppBar from 'components/appBar.js'
 import MainCarousel from 'components/mainCarousel.js'
+import UserLocalGridList from 'components/UserLocalGridList.js'
 
 
 const Home = () => {
     return (
         <div>
-            <AppBar />
             <MainCarousel />
+            <UserLocalGridList />
         </div>
     );
 };

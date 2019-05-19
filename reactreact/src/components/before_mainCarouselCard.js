@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
 
 const styles = {
   card: {
@@ -11,7 +14,7 @@ const styles = {
     borderRadius:"0%",
   },
   media: {
-    height: 350,
+    height: 200,
   },
 };
 
@@ -25,7 +28,21 @@ function MediaCard(props) {
           image="https://material-ui.com/static/images/cards/contemplative-reptile.jpg"
           title="Contemplative Reptile"
         />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Lizard
+          </Typography>
+          <Typography component="p">
+            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+            across all continents except Antarctica
+          </Typography>
+        </CardContent>
       </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          Read More
+        </Button>
+      </CardActions>
     </Card>
   );
 }
