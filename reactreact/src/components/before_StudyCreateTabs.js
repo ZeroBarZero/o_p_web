@@ -25,6 +25,7 @@ const useStyles = makeStyles(theme => ({
     //background: theme.palette.background.paper,
     //width: 500,
   },
+  tabs
 }));
 
 function StudyCreateTabs() {
@@ -60,9 +61,9 @@ function StudyCreateTabs() {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabContainer dir={theme.direction}>Step One</TabContainer>
-        <TabContainer dir={theme.direction}>Step Two</TabContainer>
-        <TabContainer dir={theme.direction}>Step Three</TabContainer>
+        <TabContainer /*dir={theme.direction}*/>Step One</TabContainer>
+        <TabContainer /*dir={theme.direction}*/>Step Two</TabContainer>
+        <TabContainer /*dir={theme.direction}*/>Step Three</TabContainer>
       </SwipeableViews>
     </div>
   );

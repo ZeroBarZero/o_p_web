@@ -60,9 +60,15 @@ function StudyCreateTabs() {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabContainer >Step One</TabContainer>
-        <TabContainer >Step Two</TabContainer>
-        <TabContainer >Step Three</TabContainer>
+        <TabContainer >
+          Step One
+        </TabContainer>
+        <TabContainer >
+          Step Two
+        </TabContainer>
+        <TabContainer >
+          Step Three
+        </TabContainer>
       </SwipeableViews>
     </div>
   );

@@ -8,7 +8,6 @@ const Root = () => (
     <BrowserRouter>
         <AppBar />
         <App/>
-        <Footer />
     </BrowserRouter>
 );
 
