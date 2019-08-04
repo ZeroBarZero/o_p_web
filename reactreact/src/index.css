@@ -1,3 +1,7 @@
+*{
+  padding:0;
+  margin: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -14,4 +18,293 @@ code {
 
 .mainRowTitle {
   margin-left : 20px;
+}
+
+.header{
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+body {
+  font-size: 16px;
+}
+
+.calendar-rectangle {
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  color: #616161;
+  font-size: 1em;
+  font-family: 'Dosis', sans-serif;
+  overflow: hidden;
+  box-shadow: 0px 0px 50px #888888;
+}
+@media (min-width: 576px) {
+  .calendar-rectangle {
+    width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  .calendar-rectangle {
+    width: 50%;
+    font-size: 1em;
+  }
+}
+@media (min-width: 992px) {
+  .calendar-rectangle {
+    width: 40%;
+    font-size: 1em;
+  }
+}
+@media (min-width: 1200px) {
+  .calendar-rectangle {
+    width: 30%;
+    font-size: 1em;
+  }
+}
+@media (min-width: 1300px) {
+  .calendar-rectangle {
+    width: 20%;
+  }
+}
+.calendar-rectangle:before {
+  content: "";
+  display: block;
+  padding-top: 120%;
+}
+
+.calendar-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.main-calendar {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-calendar .calendar-header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 30%;
+  color: #ffffff;
+}
+.main-calendar .calendar-header .title-header {
+  width: 100%;
+  height: 70%;
+  white-space: nowrap;
+  font-size: 1.2em;
+  background-color: #1e88e5;
+}
+@media (min-width: 992px) {
+  .main-calendar .calendar-header .title-header {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 1200px) {
+  .main-calendar .calendar-header .title-header {
+    font-size: 1.2em;
+  }
+}
+.main-calendar .calendar-header .title-header .header-text {
+  flex: 5;
+  display: flex;
+  height: 100%;
+}
+.main-calendar .calendar-header .title-header .header-text .today-label {
+  flex: 1;
+  font-size: 0.8em;
+}
+.main-calendar .calendar-header .title-header .header-text .today-label:hover {
+  cursor: pointer;
+  color: #1e88e5;
+  background-color: #ffffff;
+}
+.main-calendar .calendar-header .title-header .header-text .month-label {
+  flex: 3;
+}
+.main-calendar .calendar-header .days-header {
+  width: 100%;
+  height: 30%;
+  background-color: #2196f3;
+}
+.main-calendar .calendar-header .button-container {
+  width: 100%;
+  height: 30%;
+  background-color: #2196f3;
+}
+.main-calendar .calendar-header .button-container .event-button {
+  flex-grow: 1;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.main-calendar .calendar-header .button-container .event-button:hover {
+  background-color: #fff;
+  color: #2196f3;
+}
+.main-calendar .days-container {
+  width: 100%;
+  height: 70%;
+  background: #ffffff;
+}
+.main-calendar .days-container .week {
+  height: 15%;
+}
+.main-calendar .day-events {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-color: #ffffff;
+  font-size: 1.2em;
+}
+.main-calendar .day-events .event-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+}
+.main-calendar .day-events .event-container:hover {
+  cursor: pointer;
+}
+.main-calendar .day-events .event-container .animated-time {
+  width: 30%;
+}
+.main-calendar .day-events .event-container .animated-title {
+  width: 70%;
+}
+.main-calendar .day-events .event-container .event-attribute {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  transition: all 0.4s ease-in-out 0s;
+}
+.box.arrow:hover {
+  background-color: white;
+  cursor: pointer;
+  color: #1e88e5;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+.day .day-number {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.day:hover .day-number {
+  cursor: default;
+  background-color: #90caf9;
+  color: #ffffff;
+  transition: background-color 0.2s ease-in-out 0s;
+}
+.day.today .day-number {
+  border: 1px solid #90caf9;
+}
+.day.has-events .day-number {
+  color: #1e88e5;
+  font-weight: bold;
+}
+.day.different-month {
+  opacity: 0.5;
+}
+
+/* time animation */
+.time-appear {
+  transform: translateX(-100%);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.time-appear.time-appear-active {
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.time-enter {
+  transform: translateX(-100%);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.time-enter.time-enter-active {
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.time-leave {
+  transform: translateX(-100%);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.time-leave.time-leave-active {
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+/* title animation */
+.title-appear {
+  transform: translateX(100%);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.title-appear.title-appear-active {
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.title-enter {
+  transform: translateX(100%);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.title-enter.title-enter-active {
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.title-leave {
+  transform: translateX(100%);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.title-leave.title-leave-active {
+  transform: translateX(0);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }

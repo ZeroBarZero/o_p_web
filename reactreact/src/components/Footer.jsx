@@ -13,7 +13,7 @@ function Footer() {
 
   return (
     <div className={classes.root}>
-      
+      Footer
     </div>
   );
 }
